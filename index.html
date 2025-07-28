@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+         :root {
+            --shadow: 0 0 16px #000;
+        }
+        
+        @theme {
+            --animate-fade-in-scale: slider 12s infinite, fade 4s;
+            @keyframes slider {
+                0%,
+                33% {
+                    background-image: url(./img/quadra.jpg);
+                    --text-description: "Quadra!"
+                }
+                34%,
+                66% {
+                    background-image: url(./img/bebedouro.jpg);
+                    --text-description: "Bebedouro novo!"
+                }
+                67%,
+                100% {
+                    background-image: url(./img/copa.jpg);
+                    --text-description: "Copa dos alunos!"
+                }
+            }
+            @keyframes fade {
+                0% {
+                    opacity: 0;
+                }
+                15%,
+                85% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+    </style>
+    <title>Document</title>
+
+</head>
+
+<body class="w-screen h-screen">
+    <main class="w-full h-full grid place-items-center bg-[#0003]">
+        <div class="carrosel relative w-[80%] h-[80%] shadow-[--shadow] border border-solid border-red-800 rounded-xl"></div>
+    </main>
+</body>
+
+</html>
